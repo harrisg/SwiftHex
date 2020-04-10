@@ -10,7 +10,8 @@
 import Foundation
 
 extension Hex: Hashable {
-	public var hashValue: Int {
-		return Int(exactly: value) ?? 0
-	}
+
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(Int(exactly: value) ?? 0)
+    }
 }

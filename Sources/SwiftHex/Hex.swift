@@ -204,7 +204,7 @@ public struct Hex<T: BinaryInteger>: HexStringRepresentable {
 
 fileprivate extension BinaryInteger {
 	/// Rounds an integer up to nearest evenly-divisible number. Works on negative integers too.
-	fileprivate func roundingUp(divisibleBy: Self) -> Self {
+	func roundingUp(divisibleBy: Self) -> Self {
 		let source: Self = self >= 0 ? self : 0 - self
 		let isNegative: Bool = self < 0
 		
